@@ -36,7 +36,10 @@ Kiro Gateway - OpenAI-совместимый прокси для Kiro API.
     - exceptions: Обработчики исключений
 """
 
-__version__ = "1.0.2"
+# Версия импортируется из config.py — единственного источника истины (Single Source of Truth)
+# Это позволяет менять версию только в одном месте
+from kiro_gateway.config import APP_VERSION as __version__
+
 __author__ = "Jwadow"
 
 # Основные компоненты для удобного импорта

@@ -249,7 +249,7 @@ DEBUG_DIR: str = os.getenv("DEBUG_DIR", "debug_logs")
 # Версия приложения
 # ==================================================================================================
 
-APP_VERSION: str = "1.0.2"
+APP_VERSION: str = "1.0.3"
 APP_TITLE: str = "Kiro API Gateway"
 APP_DESCRIPTION: str = "OpenAI-compatible interface for Kiro API (AWS CodeWhisperer). Made by @jwadow"
 
